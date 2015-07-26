@@ -1,5 +1,5 @@
 ;;;;;加载配色主题
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/elisp/themes/")
 (load-theme 'molokai t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
