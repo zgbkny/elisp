@@ -1,0 +1,42 @@
+== 公共
+   >> 终止当前操作: C + g
+   >> 复制: M + w
+   >> 剪切: C + w
+   >> 粘贴: C + y
+   >> 下一屏: C + v
+   >> 上一屏: M + v
+
+== 文本操作
+   >> 打开文件: C + x C + f
+   >> 打开目录: M + x dired
+   >> 创建目录: M + x make-directory
+   >> 保存文件: C + x C + s
+   >> 撤销上一次编辑: C + /
+   >> 往下查找: C + s
+   >> 往上查找: C + r
+   >> 往下正则查找: C + M + s
+   >> 往上正则查找: C + M + s
+
+== buffer操作
+   >> 切换上下buffer: C + x LEFT | RIGHT
+   >> 列出buffer list: C + x C + b
+   >> 列出关联文件的buffer list: C + u C + x C + b
+   >> 关闭buffer: C + x k
+
+== 窗口操作
+   >> 当前窗口最大化: C + x 1
+   >> 关闭当前窗口: C + x 0
+   >> 切换有效窗口（buffer中对应的内容不同）: C + x o
+
+== shell
+   >> 上一条命令: C + up
+
+== mode
+   >> emacs mode改变: M + x mode-name
+
+== org mode
+   >> 展开节点: Tab
+   >> 压缩节点: double Tab
+
+== dired mode
+   >> 修改文件名: C + x C + q进入编辑模式，直接修改
