@@ -48,4 +48,35 @@
 
 ;;;;; 设置字体
 ;;;;; 方法为: emacs->options->Set Default Font->"M-x describe-font"查看当前使用的字体名称、字体大小
-(set-default-font " -bitstream-Courier 10 Pitch-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1")
+;(set-default-font " -bitstream-Courier 10 Pitch-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1")
+(set-default-font "bitstream vera sans mono-12")
+(set-fontset-font "fontset-default"  
+                  'gb18030' ("微软雅黑" . "unicode-bmp"))
+;(set-default-font "Courier New-12")
+
+
+(defun copy-line (&optional arg)
+ "Save current line into Kill-Ring without mark the line"
+ (interactive "P")
+ (let ((beg (line-beginning-position)) 
+	(end (line-end-position arg)))
+ (copy-region-as-kill beg end))
+)
+
+
+(defun copy-word (&optional arg)
+ "Copy words at point"
+ (interactive "P")
+ (let ((beg (progn (if (looking-back "[a-zA-Z0-9]" 1) (backward-word 1)) (point))) 
+	(end (progn (forward-word arg) (point))))
+ (copy-region-as-kill beg end))
+)
+
+
+(defun copy-paragraph (&optional arg)
+ "Copy paragraphes at point"
+ (interactive "P")
+ (let ((beg (progn (backward-paragraph 1) (point))) 
+	(end (progn (forward-paragraph arg) (point))))
+ (copy-region-as-kill beg end))
+)
