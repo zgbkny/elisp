@@ -7,6 +7,9 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;;;;; 高亮当前行 turn on highlighting current line
+(global-hl-line-mode 1)
+
 ;;;;;加载配色主题
 (add-to-list 'custom-theme-load-path "~/.emacs.d/elisp/themes/")
 (load-theme 'molokai t)
@@ -183,3 +186,15 @@
 (provide 'feng-highlight)
 
 (global-set-key (kbd "M-i") 'feng-highlight-at-point)
+
+
+(defun move-region-up (beg end)
+  (interactive "r")
+  (move-region-around 'up beg end))
+
+(defun move-region-down (beg end)
+  (interactive "r")
+  (move-region-around 'down beg end))
+
+(global-set-key (quote [M-up]) (quote move-region-up))
+(global-set-key (quote [M-down]) (quote move-region-down))
