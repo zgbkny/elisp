@@ -1,3 +1,5 @@
+(tool-bar-mode -1)
+
 ;;;;; 自动启动smex
 (require 'smex) ; Not needed if you use package.el
 (smex-initialize) ; Can be omitted. This might cause a (minimal) delay
@@ -51,11 +53,11 @@
 
 ;;;;; 设置字体
 ;;;;; 方法为: emacs->options->Set Default Font->"M-x describe-font"查看当前使用的字体名称、字体大小
-;(set-default-font " -bitstream-Courier 10 Pitch-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1")
-(set-default-font "bitstream vera sans mono-12")
+(set-default-font " -bitstream-Courier 10 Pitch-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1")
+;;(set-default-font "bitstream vera sans mono-12")
 (set-fontset-font "fontset-default"  
                   'gb18030' ("微软雅黑" . "unicode-bmp"))
-;(set-default-font "Courier New-12")
+;;(set-default-font "Courier New-14")
 
 
 (defun copy-line (&optional arg)
