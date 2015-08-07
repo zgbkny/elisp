@@ -1,3 +1,4 @@
+(require 'cl)
 (tool-bar-mode -1)
 
 ;;;;; 自动启动smex
@@ -53,8 +54,8 @@
 
 ;;;;; 设置字体
 ;;;;; 方法为: emacs->options->Set Default Font->"M-x describe-font"查看当前使用的字体名称、字体大小
-(set-default-font " -bitstream-Courier 10 Pitch-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1")
-;;(set-default-font "bitstream vera sans mono-12")
+;;(set-default-font " -bitstream-Courier 10 Pitch-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1")
+(set-default-font "bitstream vera sans mono-12")
 (set-fontset-font "fontset-default"  
                   'gb18030' ("微软雅黑" . "unicode-bmp"))
 ;;(set-default-font "Courier New-14")
@@ -188,7 +189,7 @@
 (provide 'feng-highlight)
 
 (global-set-key (kbd "M-i") 'feng-highlight-at-point)
-
+(global-set-key (kbd "<mouse-3>") 'feng-highlight-at-point)
 
 (defun move-region-up (beg end)
   (interactive "r")
